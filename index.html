@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="./assets/logo.png">
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <div class="sidebar">
+            <div class="nav">
+                <!-- <div class="logo">
+                    
+                </div>
+                <div class="home">
+                    
+                </div>
+                <div class="search">
+                    
+                </div> -->
+                <ul>
+                    <div class="logo">
+                        <li>
+                            <i class="fa-brands fa-spotify"></i>
+                            <p href="#">Spotify</p>
+                        </li>
+                    </div>
+                    
+                    <div class="nav-option">
+                        <li class="home">
+                            <i class="fa-solid fa-house"></i>
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <a href="#">Search</a>
+                        </li>
+                    </div>
+        
+                </ul>
+            </div>
+
+            <div class="library">
+                <div class="options">
+                    <div class="lib-icon">
+                        <li id="libid">
+                            <img src="./assets/library_icon.png" alt="Library Icon">
+                            <p href="#">Your Library</p>
+                        </li>
+                    </div>
+                <div class="icons">
+                    <i id="i1" class="fa-solid fa-plus"></i>
+                    <i id="i2" class="fa-solid fa-arrow-right"></i>
+                </div>
+                </div>
+
+                <div class="lib-boxes">
+                     <div class="box">
+                        <p class="box-p1">Create your first playlist</p>
+                        <p class="box-p2">It's easy, we'll help you</p>
+                        <button class="badge">Create playlist</button>
+                     </div>
+
+                     <div class="box" style="margin-top: 0.5rem;">
+                        <p class="box-p1">Let's find some podcasts to follow</p>
+                        <p class="box-p2">we'll keep you updated on new episodes</p>
+                        <button class="badge">Browse podcasts</button>
+                     </div>
+
+                     <div class="box" style="margin-top: 0.5rem;">
+                        <p class="box-p1">Discover new music</p>
+                        <p class="box-p2">We'll help you find new tracks based on your taste</p>
+                        <button class="badge">Explore music</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="main-content">
+            <div class="sticky-nav">
+                <img src="./assets/backward_icon.png" alt="">
+                <img src="./assets/forward_icon.png" alt="">
+                <button class="badge">Explore Premium</button>
+                <button class="badge" style="background-color: rgba(0, 0, 0, 0.833); color: white;"> <i class="fa-regular fa-circle-down"></i> Install App</button>
+            </div>
+        </div>
+        <div class="music-player">Music player</div>
+    </div>
+</body>
+</html>
