@@ -10,8 +10,8 @@
 }
 body{
     background-color: black;
-    overflow-x: hidden;
-    overflow-y: auto;
+    /* overflow-x: hidden;*/
+    overflow-y: auto; 
 }
 
 .main{
@@ -19,48 +19,105 @@ body{
     height: 100vh;
     overflow-x: hidden;
     width: 100%;
+    overflow-y: auto;
 }
 
-.sidebar{
-    /* background-color: #121212; */
+.sidebar {
     background-color: black;
-    width: 18.375rem;
-    border-radius: 1rem;   /* 1rem = 16px */
+    width: 18.375rem; /* Fixed width */
+    border-radius: 1rem;
     margin: 0.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    transition: left 0.3s ease;
+  }
+  
+  .main-content {
+    background-color: #121212;
+    border-radius: 1rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0.5rem 0.5rem 0.5rem 18.875rem; /* Offset by the width of the sidebar plus margin */
+    /* width: calc(100% - 18.875rem);  */
+    max-height: calc(100vh - 1rem);
+    
+  }
+  .main_cont{
+    margin-left: 0.5rem;
     display: flex;
-    flex-wrap: wrap;
+    height: 100vh;
+    overflow-x: hidden;
+    width: 100%;
+  }
+.toggle-button {  
+    display: none; /* Hide the button by default */  
+    position: fixed;  
+    top: 1rem;  
+    left: 1rem;  
+    background-color: black;  
+    color: #fff;  
+    margin-left: 1rem;  
+    border: none;  
+    cursor: pointer;
+    z-index: 1000;  
+    height: 2rem;
+    width: 2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }  
+  @media (max-width: 768px) { /* Media query for mobile devices */  
+    .sidebar {  
+      left: -20rem; /* Hide sidebar on mobile */  
+    }  
+
+    .toggle-button {  
+      display: block; /* Show the button on mobile */  
+    }  
+
+    .main-content {  
+      margin-left: 0.5rem; /* Remove margin for content */  
+    }  
+    
+    .nxt-pre{
+        display: none;
+    }
+    .sign-login-btn{
+        left: -20rem;
+    }
+    .phone-logo{
+        display:block;
+    }
+  }  
+
+  .sidebar.show {  
+    left: 0; /* Show sidebar when button is clicked */  
+  }
+  .sign-login-btn.show {
+    left: 5rem;
+  }
+  .phone-logo.show{
+    display: none;
 }
 
-.main-content{
-    /* position: relative; */
-    background-color: #121212;
-    flex: 1;
-    width: 100%;
-    border-radius: 1rem;
-    overflow: auto;
-    overflow-x: hidden;
-    margin: 0.5rem 0.5rem 0.5rem 0;
-}
 /* .main-content::-webkit-scrollbar {
     display: none;
 } */
 
 /* Global Scrollbar Styling */
-.main::-webkit-scrollbar {
+.main_cont::-webkit-scrollbar {
     width: 1rem;
-    background-color: black; 
+    background-color: black;
 }
 
-.main::-webkit-scrollbar-thumb {
+.main_cont::-webkit-scrollbar-thumb {
     background-color: rgb(103, 100, 100);
     border-radius: 2px;
     border: 1px solid black;
 }
-
-/* .main::-webkit-scrollbar-thumb:hover {
-    background-color: rgb(118, 115, 115); 
-} */
-
 /* Main Content Scrollbar Styling */
 .main-content::-webkit-scrollbar {
     width: 0.85rem;
@@ -138,6 +195,19 @@ li{
 .logo p{
     margin-left: 0.2rem;
 }
+/* logo for phone  */
+.phone-logo{
+    font-weight: 600;
+    display: flex;
+    margin: 0 4rem;
+        
+}
+.phone-logo i{
+    font-size: 1.5rem;
+}
+.phone-logo p{
+    margin-left: 0.2rem;
+}
 
 a{
     font-weight: 700;
@@ -209,8 +279,9 @@ a:hover{
 }
 
 .lib-boxes{
-    height: 25rem;
+    height: 20.5rem;
     overflow: auto;
+    max-height: calc(100vh - 1rem);
 }
 
 .lib-boxes::-webkit-scrollbar {
@@ -278,7 +349,6 @@ button:hover{
     width: 6.8rem;
     font-size: 1rem;
     margin-top: 0;
-
 }
 .nxt-pre img{
     width: 1.2rem;
@@ -287,18 +357,21 @@ button:hover{
     margin: 0 0.5rem;
     opacity: 0.7;
 }
-/* .nxt-pre{
-    padding-left: 1rem; 
-} */
 
 .sign-login-btn{
     padding-right: 2rem;
+    position: fixed;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    right: 4rem;
+    transition: left 0.3s ease;
 }
 
-
 .sticky-nav{
-    position: sticky;
+    position: fixed;
     top: 0;
+    bottom: 0;
     padding: 0 1.1rem ;
     background-color: #000000;
     height: 4rem;
@@ -316,7 +389,7 @@ button:hover{
 
 .card-hdr{
     padding: 0 1.1rem;
-    margin-top: 1rem;
+    margin-top: 4.5rem;
     color: #fff;
     height: fit-content;
     padding: 0.5rem 0;
@@ -432,10 +505,8 @@ button:hover{
     padding: 2.5rem;
 }
 .footer-section{
-    
     display: flex;
     flex-wrap: wrap;
-    
 }
 .f-content ul{
     padding: 0;
@@ -507,4 +578,8 @@ button:hover{
     font-weight: 500;
     margin-block: 0px;
     padding-top: 16px;
+}
+
+@media (max-width: 450px){
+    
 }
