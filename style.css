@@ -581,6 +581,15 @@ button:hover{
 }
 
 @media (max-width: 430px) {
+    .card-hdr{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .show-all{
+        margin-left: 0.5rem;
+    }
     .card-container {
         width: 48%;
         margin-top: 0.5rem;
@@ -645,5 +654,8 @@ button:hover{
     }
     #playbtn:hover{
         opacity: 1;
+     }
+     .social{
+        margin-left: 0;
      }
 }
