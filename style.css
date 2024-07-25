@@ -584,11 +584,12 @@ button:hover{
     .card-container {
         width: 48%;
         margin-top: 0.5rem;
+        height: fit-content;
     }
     
     .card-section {
         display: flex;
-    flex-wrap: wrap;
+        flex-wrap: wrap;
         justify-content: space-between;
     }
 
@@ -597,6 +598,12 @@ button:hover{
         display: flex;
         justify-content: center;
     }
+    .art-pic img {
+        max-width: 7rem; 
+        max-height: 7rem; 
+        border-radius: 50%;
+        object-fit: cover; 
+    }
 
     .art-info {
         padding: 0.5rem;
@@ -604,9 +611,16 @@ button:hover{
     }
 
     .art-info span, .art-info p {
-        white-space: normal; 
+        white-space: normal;
         overflow: visible;
         text-overflow: initial;
+    }
+    .poster img{
+        margin-top: 0.75rem;
+        max-width: 7rem;
+        max-height: 7rem;
+        border-radius: 0.5rem;
+        object-fit: cover;
     }
 
     .card-container:hover {
