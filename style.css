@@ -444,7 +444,7 @@ button:hover{
     height: fit-content;
     opacity: 0.7;
     font-size: 0.75rem;
-    text-align: left ;
+    text-align: left 0.5rem;
     padding-top: 0.5rem;
     padding-right: 0.5rem;
     overflow: hidden;         
@@ -584,7 +584,7 @@ button:hover{
     .card-container {
         width: 48%;
         margin-top: 0.5rem;
-        height: fit-content;
+        height: inherit;
     }
     
     .card-section {
