@@ -627,4 +627,23 @@ button:hover{
         background-color: #232323;
         cursor: pointer;
     }
+    .play-btn{
+        position: absolute;
+        transform: translateY(8rem);
+        left: 8rem;
+    }
+    #playbtn {
+        opacity: 0; 
+        width: 2.25rem;
+        height: 2.25rem; 
+        object-fit: cover;
+        border-radius: 50%;
+        position: absolute; 
+        bottom: 1rem; 
+        right: 1rem; 
+        transition: opacity 0.5s;
+    }
+    #playbtn:hover{
+        opacity: 1;
+     }
 }
